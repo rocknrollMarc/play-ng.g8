@@ -18,9 +18,13 @@ var $application_name$ = angular.module('$application_name$',
 
 $application_name$.config(function ($routeProvider) {
     $routeProvider.
-        when('/wiz1', {
+        when('/page1', {
             controller: 'MyController',
-            templateUrl: '/fragments/frag.html'
+            templateUrl: '/fragments/page1.html'
+        }).
+        when('/page2', {
+            controller: 'MyController',
+            templateUrl: '/fragments/page2.html'
         }).
         //when('/new', {controller:CreateCtrl, templateUrl:'detail.html'}).
         otherwise({redirectTo: '/'});
