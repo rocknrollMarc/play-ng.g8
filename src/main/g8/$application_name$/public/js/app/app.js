@@ -7,22 +7,22 @@
  */
 'use strict';
 
-var $application_name$ = angular.module('$application_name$',
+var my_app = angular.module('my_app',
     [
         'ui',
-        '$application_name$.controllers',
-        '$application_name$.filters',
-        '$application_name$.services',
-        '$application_name$.directives'
+        'my_app.controllers',
+        'my_app.filters',
+        'my_app.services',
+        'my_app.directives'
     ]);
 
-$application_name$.config(function ($routeProvider) {
+my_app.config(function ($routeProvider) {
     $routeProvider.
-        when('/page1', {
+        when('/page1/', {
             controller: 'MyController',
             templateUrl: '/fragments/page1.html'
         }).
-        when('/page2', {
+        when('/page2/', {
             controller: 'MyController',
             templateUrl: '/fragments/page2.html'
         }).
@@ -30,7 +30,7 @@ $application_name$.config(function ($routeProvider) {
         otherwise({redirectTo: '/'});
 });
 
-$application_name$.value('ui.config', {
+my_app.value('ui.config', {
     tinymce: {
 //       theme: 'simple'
        theme: 'advanced'
